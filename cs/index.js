@@ -8,7 +8,7 @@ const mongojs = require('mongojs');
 
 const app = express();
 
-var db = mongojs('CS');
+var db = mongojs('CS2');
 var id = mongojs.ObjectId;
 
 //middlewares
