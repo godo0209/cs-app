@@ -14,4 +14,8 @@ It wasn't necesary to do it like that, however, I wanted to prepeare the system 
 As soon as the user gets in, he will see two inputs, asking for a username and a password, and two buttons, one for login and one for registration. If both inputs meet some requirements then the user can register or login.
 
 ### Login
-If the user wants to log in, the program will to call the api for the hash in the database for that username, and will hash the password given in the input. After checking if the api password is the same as the second half of the user hashed passor
+If the user wants to log in, the program will to call the api for the hash in the database for that username, and will hash the password given in the input. After checking if the api password is the same as the second half of the user hashed password, the user would have login successfully.
+
+> [!NOTE]  
+> This documentation is still in process
+> 
