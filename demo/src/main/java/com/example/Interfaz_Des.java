@@ -57,7 +57,7 @@ public class Interfaz_Des {
         //boton back
             JButton back = new JButton();
             back.setText("Back");
-            back.setIcon(new ImageIcon("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons//back.png"));
+            back.setIcon(new ImageIcon(getClass().getResource("/icons/back.png")));
             ActionListener back_action = new ActionListener() {
                 public void actionPerformed(ActionEvent event) {
                     new Interfaz_Choose(frame, userId, hash);
@@ -106,7 +106,7 @@ public class Interfaz_Des {
             JPanel panelAux = new JPanel();
             String txt = ficheros[i].getFecha()+"   " + ficheros[i].getNombre();
             Button bot = new Button(i, txt);
-            Button trashBot = new Button(i, new ImageIcon("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons//trash.png"));
+            Button trashBot = new Button(i, new ImageIcon(getClass().getResource("/icons/trash.png")));
 
             int spaceTop = 2, spaceBot = 2;
             if(i == 0)

@@ -46,6 +46,8 @@ public class Interfaz_Autenticator {
     private String name;
     private String keyAu;
     private Boolean parar = false;
+    private static final String QR_PATH = System.getProperty("java.io.tmpdir") + "/QR.png";
+
 
     public Interfaz_Autenticator(JFrame frame, String userId, String name, String hash, Boolean login){
         this.frame = frame;
@@ -105,9 +107,10 @@ public class Interfaz_Autenticator {
         return String.format(format, name, keyAu);
     }
     private void createQR(String barCode){
+        System.out.println("Creating QR code for: " + barCode);
         try {
             BitMatrix matrix = new MultiFormatWriter().encode(barCode, BarcodeFormat.QR_CODE, 200, 200);
-            FileOutputStream out = new FileOutputStream("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons/QR.png");
+            FileOutputStream out = new FileOutputStream(QR_PATH);
             MatrixToImageWriter.writeToStream(matrix, "png", out);
         } catch (Exception e) {
             e.printStackTrace();
@@ -120,6 +123,7 @@ public class Interfaz_Autenticator {
 				while (!parar) {
 					try {
                         code = getTOTPCode(keyAu);
+                        System.out.println("Geting TOTP code..." + code);
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {e.printStackTrace();}
 				}
@@ -152,9 +156,10 @@ public class Interfaz_Autenticator {
         JButton check = new JButton("Check code");
         ActionListener check_action = new ActionListener() {
             public void actionPerformed(ActionEvent event) {
+                System.out.println("Checking code: " + cod.getText() + " against: " + code);
                 if(code.equals(cod.getText())){
                     parar = true;
-                    File f = new File("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons/QR.png");
+                    File f = new File(QR_PATH);
                     f.delete();
                     new Interfaz_Choose(frame, userId, hash);
                 }
@@ -207,7 +212,7 @@ public class Interfaz_Autenticator {
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                ImageIcon icon = new ImageIcon("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons/QR.png");
+                ImageIcon icon = new ImageIcon(QR_PATH);
                 JOptionPane.showMessageDialog(
                         null,
                         new JLabel("", icon, JLabel.LEFT),

@@ -58,7 +58,7 @@ public class Interfaz_Choose {
         final int notis = checkNotifications();
         JButton noti = new JButton();
         noti.setText(String.valueOf(notis));
-        noti.setIcon(new ImageIcon("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons//msg.png"));
+        noti.setIcon(new ImageIcon(getClass().getResource("/icons/msg.png")));
         ActionListener noti_action = new ActionListener() {
             public void actionPerformed(ActionEvent event) {
                 if(notis == 0)

@@ -64,7 +64,7 @@ public class Interfaz_Send extends JFrame{
         //boton back
             JButton back = new JButton();
             back.setText("Back");
-            back.setIcon(new ImageIcon("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons//back.png"));
+            back.setIcon(new ImageIcon(getClass().getResource("/icons/back.png")));
             ActionListener back_action = new ActionListener() {
                 public void actionPerformed(ActionEvent event) {
                     new Interfaz_Choose(frame, userSenderId, hash);

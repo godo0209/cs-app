@@ -1,0 +1,21 @@
+services:
+  mongo:
+    image: mongo
+    container_name: mongo_database
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  api:
+    build: ./cs
+    container_name: cs_api
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/CS2
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:

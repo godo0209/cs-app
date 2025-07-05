@@ -2,13 +2,15 @@
 
 const port = process.env.PORT || 3000
 
+require('dotenv').config();
 const express = require('express');
-const logger = require('morgan');
+const logger  = require('morgan');
 const mongojs = require('mongojs');
 
-const app = express();
+const app     = express();
 
-var db = mongojs('CS2');
+const dbUrl = process.env.MONGO_URL || 'CS2'; // URL de la base de datos MongoDB
+var db = mongojs(dbUrl);
 var id = mongojs.ObjectId;
 
 //middlewares

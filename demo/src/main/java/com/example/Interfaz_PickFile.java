@@ -59,7 +59,7 @@ public class Interfaz_PickFile extends JFrame{
         //boton back
             JButton back = new JButton();
             back.setText("Back");
-            back.setIcon(new ImageIcon("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons//back.png"));
+            back.setIcon(new ImageIcon(getClass().getResource("/icons/back.png")));
             ActionListener back_action = new ActionListener() {
                 public void actionPerformed(ActionEvent event) {
                     new Interfaz_Send(frame, userSenderId, hash);
@@ -70,7 +70,7 @@ public class Interfaz_PickFile extends JFrame{
         //boton home
             JButton home = new JButton();
             home.setText("Home");
-            home.setIcon(new ImageIcon("/home/godo/Desktop/Dropbox/cs-p3/cs-app/icons//home.png"));
+            home.setIcon(new ImageIcon(getClass().getResource("/icons/home.png")));
             ActionListener home_action = new ActionListener() {
                 public void actionPerformed(ActionEvent event) {
                     new Interfaz_Choose(frame, userSenderId, hash);
