@@ -6,8 +6,9 @@ package runproject;
     import java.awt.Desktop;
     import java.awt.event.ActionEvent;
     import java.awt.event.ActionListener;
-    
-    import javax.swing.JButton;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
     import javax.swing.JFrame;
     import javax.swing.JLabel;
     import javax.swing.JPanel;
@@ -25,7 +26,7 @@ public class Main {
         //Creating the Frame
         frame = new JFrame("");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(400, 170);
+        frame.setSize(400, 100);
         frame.setLocation(800, 450);
         frame.setResizable(false);
 
@@ -54,6 +55,7 @@ public class Main {
 
         panel1.setBackground(new java.awt.Color(33, 33, 33));
         panel.setBackground(new java.awt.Color(33, 33, 33));
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         frame.getContentPane().add(BorderLayout.CENTER, panel);
         
