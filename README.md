@@ -62,9 +62,9 @@ cs-app/
 
 You can clone the repository or just [download the release V1.0.0](https://github.com/godo0209/cs-app/releases/download/v1.0.0/cs-app-release.zip) (if you downloaded the release please extract the zip into a folder).
 
->💡 From there you just double click the file `runproject.jar` and click the button that will appear. 
+>💡 From there you just double click the files `run.bat` or `run.sh` depending on the OS you are using. Then if everything is set up ok a window with a button will appear and you just have to click it. 
 
-The file `runproject.jar` was created to make things easier and will run the services needed to work and also will open the app file for you. But if you prefer manual steps, run:
+The files `run.bat` and `run.sh` ust check if java is installed propertly and exec the file `runproject.jar`, that was created to make things easier and will run the services needed to work. That file will also open the app file for you. But if you prefer manual steps, run:
 
 ```
 git clone https://github.com/godo0209/cs-app
