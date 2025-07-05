@@ -3,3 +3,5 @@
 # Compiled class file
 *.class
 
+*.jar
+*.zip
