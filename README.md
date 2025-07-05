@@ -81,6 +81,31 @@ java -jar cs-app.jar
 
 ---
 
+## Workflow
+
+The states in which the user can transition are this
+
+```
+---mermaid
+config:
+  theme: redux
+  look: neo
+  layout: dagre
+---
+stateDiagram
+  direction TB
+  [*] --> Login
+  [*] --> Register
+  Login --> 2FA
+  Register --> 2FA
+  2FA --> Await
+  Await --> Upload
+  Await --> Download
+  Await --> Send
+```
+
+---
+
 ## 📘 About This Project
 
 This was a university project focused on **learning modern cryptographic practices** in real-world applications. While it's far from production-ready, it showcases the following:
