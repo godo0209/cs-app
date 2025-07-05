@@ -60,7 +60,7 @@ cs-app/
 
 ### ▶️ Start the App
 
-You can clone the repository or just [download the release V1.0.0](https://github.com/godo0209/cs-app/releases/download/v1.0.0/cs-app-release.zip) (if you downloaded the release please extract the zip into a folder).
+You can clone the repository or just [download the release V1.0.0](https://github.com/godo0209/cs-app/releases/download/v1.0.1/cs-app-release.zip) (if you downloaded the release please extract the zip into a folder).
 
 >💡 From there you just double click the files `run.bat` or `run.sh` depending on the OS you are using. Then if everything is set up ok a window with a button will appear and you just have to click it. 
 
