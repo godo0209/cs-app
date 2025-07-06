@@ -67,4 +67,4 @@ Client ➡️ Encrypts file with AES
 
 Feel free to take a look at the [diagrams](./workflows.md) prepared to explain the workflow of the app, it may help to get a better undertanding of everything.
 
-> 📘 If you want more information about the project I recommend you to read the [Technical report on encryption and authentication (PDF)](./docs/cryptography-report.pdf)
+> 📘 If you want more information about the project I recommend you to read the [Technical report on encryption and authentication (PDF)](./cryptography-report.pdf)

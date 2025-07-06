@@ -1,11 +1,12 @@
 
-# 🌊 Project workflows
+#   Project workflows
 
 I used mermaid diagrams to explain the workflow I used for each action. First take a look at the state diagram beacause the next diagrams may make reference to that one in order to be more clear and separate workflows.
 
-### 👤 States
+### 🗺️ States
 
 In the next diagram you can see the states in which the user can move between
+
 ```mermaid
 ---
 config:
@@ -26,7 +27,9 @@ stateDiagram
 ```
 ---
 
-### Auth
+### 👤 Auth
+
+There are two diagrams, one for register process and one for login. Although both processes end up having the same information about the user each one have a different flow to reach it. 
 
 ```mermaid
 ---
@@ -85,7 +88,9 @@ flowchart TD
   end
 ```
 ---
-## Actions
+## 🎯 Actions
+
+The actions seen in the diagram are upload, download and send files. In the diagram send the nodes `Encrypt File` and `Decrypt File` make references to the actions upload and download files.
 
 ```mermaid
 ---
