@@ -29,14 +29,14 @@ stateDiagram
 
 ### 👤 Auth
 
-There are two diagrams, one for register process and one for login. Although both processes end up having the same information about the user each one have a different flow to reach it. 
+There are two diagrams, one for `Register` process and one for `Login`. Although both processes end up having the same information about the user each one have a different flow to reach it. 
 
 <img src="./Auth-diagram.svg"  alt="Auth diagram"  />
 
 ---
 ## 🎯 Actions
 
-The actions seen in the diagram are upload, download and send files. In the diagram send the nodes `Encrypt File` and `Decrypt File` make references to the actions upload and download files.
+The actions seen in the diagram are `Upload`, `Download` and `Send`. In the diagram `Send` the nodes `Encrypt File` and `Decrypt File` make references to the processes seen in the diagrams `Upload` and `Download`.
 
 <img src="./Actions-diagram.svg"  alt="Actions diagram"  />
 
